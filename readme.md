@@ -1,6 +1,6 @@
 # Meteor Framework
 
-This is a basic framework for Meteor projects, using React, with authentication.
+This is a note taking application built on Meteor with React.
 
 ## Authors
 
