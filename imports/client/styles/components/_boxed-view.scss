@@ -1,5 +1,4 @@
 .boxed-view {
-	background:$boxed-view-overlay-bg;
 	width:100vw;
 	height:100vh;
 	display:flex;
@@ -7,6 +6,7 @@
 	justify-content:center;
 	.box {
 		background:$boxed-view-bg;
+		border:2px solid $boxed-view-border;
 		padding:2.4rem;
 		text-align:center;
 		width:24rem;
