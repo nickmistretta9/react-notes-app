@@ -2,11 +2,12 @@
 	display:flex;
 	max-width:$site-max-width;
 	margin:0 auto;
-	padding:$space;
+	padding:$large-space $space;
 	height:$page-content-height;
 	.sidebar {
 		width:$sidebar-width;
 		display:flex;
+		padding-right:$large-space;
 	}
 	.main {
 		display:flex;

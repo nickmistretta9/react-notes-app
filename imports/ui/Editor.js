@@ -41,15 +41,17 @@ export class Editor extends React.Component {
 		if(this.props.note) {
 			return (
 				<div className="editor">
-					<input value={this.state.title} placeholder="Untitled Note" onChange={this.handleTitleChange.bind(this)} />
-					<textarea value={this.state.body} placeholder="Your Note Here" onChange={this.handleBodyChange.bind(this)}></textarea>
-					<button onClick={this.deleteExistingNote.bind(this)}>Delete Note</button>
+					<input className="editor-title" value={this.state.title} placeholder="Untitled Note" onChange={this.handleTitleChange.bind(this)} />
+					<textarea className="editor-body" value={this.state.body} placeholder="Your Note Here" onChange={this.handleBodyChange.bind(this)}></textarea>
+					<div>
+						<button className="button secondary" onClick={this.deleteExistingNote.bind(this)}>Delete Note</button>
+					</div>
 				</div>
 			);
 		} else {
 			return (
-				<div className="wrapper">
-					<p>
+				<div className="editor">
+					<p className="editor-message">
 						{this.props.selectedNoteId ? 'Note Not Found' : 'Pick or Create a Note To Get Started'}
 					</p>
 				</div>
