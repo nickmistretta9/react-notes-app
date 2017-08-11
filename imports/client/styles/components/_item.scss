@@ -1,21 +1,42 @@
 .item-list {
-	border-color:white;
+	background-color:white;
 	border:1px solid $grey;
 	width:100%;
 	overflow-y:scroll;
+	.header {
+		display:flex;
+		flex-direction:column;
+		padding:$space;
+	}
 }
 .item {
-	background:$light-grey;
-	border:1px solid $item-border;
-	margin-bottom:$space;
+	cursor:pointer;
 	padding:$space;
-	.message {
-		color:$item-text-color;
+	border-left:$item-border-width solid transparent;
+	transition:all 0.3s ease;
+	&:hover {
+		background-color:$light-grey;
+		border-left:$item-border-width solid $grey;
 	}
-	.status-message {
-		color:$item-text-color;
-		font-style:italic;
-		text-align:center;
+	&.selected, &.selected:hover {
+		background-color:$light-grey;
+		border-left:$item-border-width solid $brand-primary;
+		.title {
+			font-weight:bold;
+		}
+	}
+	.title {
+		font-weight:normal;
+		font-size:$base-font-size;
+		margin-bottom:.4rem;
+	}
+	.subtitle {
+		color:$dark-grey;
 		margin:0;
 	}
+}
+.empty-item {
+	font-style:italic;
+	padding:$space;
+	text-align:center;
 }
