@@ -3,6 +3,7 @@
 	border:1px solid $grey;
 	width:100%;
 	overflow-y:scroll;
+	-webkit-overflow-scrolling: touch;
 	.header {
 		display:flex;
 		flex-direction:column;
