@@ -7,11 +7,18 @@
 		padding:$large-space $space;
 	}
 	.sidebar {
-		width:$sidebar-width;
-		display:none;
-		padding-right:$large-space;
+		display:flex;
+		width:100vw;
+		transition:all 0.3s ease;
+		position:fixed;
+		top:$header-height;
+		left:-100vw;
+		bottom:0;
 		@include desktop() {
 			display:flex;
+			width:$sidebar-width;
+			padding-right:$large-space;
+			position:static;
 		}
 	}
 	.main {
@@ -21,4 +28,8 @@
 			width:$main-content-width;
 		}
 	}
+}
+
+.is-nav-open .page-content .sidebar {
+	left:0;
 }

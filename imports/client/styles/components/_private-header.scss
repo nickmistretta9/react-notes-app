@@ -9,6 +9,7 @@
 		margin:0 auto;
 		padding:$space;
 		height:$header-height;
+		align-items:center;
 		h1 {
 			margin:0;
 		}
@@ -18,6 +19,14 @@
 			padding:0;
 			margin:0;
 			text-decoration:underline;
+		}
+		.header-nav-toggle {
+			cursor:pointer;
+			height:2rem;
+			width:2rem;
+			@include desktop {
+				display:none;
+			}
 		}
 	}
 }
